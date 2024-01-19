@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace TalkyTina
 {
@@ -14,6 +16,7 @@ namespace TalkyTina
 
             ConsoleView view = new ConsoleView();
             PhraseLibrary model = new PhraseLibrary();
+            test testNode = new test();
             int userSelection;
             do
             {
@@ -31,8 +34,14 @@ namespace TalkyTina
                     view.DisplayPhrases(model.ListPhrases());
                     model.PlayPhrase(view.PlayPhrase());
                 }
+                else if (userSelection == 4)
+                {
+                    testNode.Initialize();
+                    testNode.ExecuteTest();
+                    testNode.ClearMemory();
+                }
             }
-            while (userSelection != 4);
+            while (userSelection != 5);
         }
     }
 }

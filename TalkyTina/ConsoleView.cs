@@ -16,9 +16,10 @@ namespace TalkyTina
             Console.WriteLine("1) Add a phrase");
             Console.WriteLine("2) Remove a phrase");
             Console.WriteLine("3) Make Tina talk");
-            Console.WriteLine("4) Exit");
+            Console.WriteLine("4) Run Selenium Test");
+            Console.WriteLine("5) Exit");
             Console.WriteLine("______________________");
-            Console.WriteLine("Make a selection (1-4)");
+            Console.WriteLine("Make a selection (1-5)");
             return Convert.ToInt32(Console.ReadLine());
         }
 
